@@ -1,0 +1,377 @@
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.container{
+	width: 80%;
+	overflow: hidden;
+	margin: auto;
+}
+
+.overlay{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	opacity: .4;
+	left: 0;
+	top: 0;
+}
+
+/*Global*/
+body{
+	font-family: 'Merriweather', sans-serif;
+	color: #212121;
+	line-height: 1.6;
+	font-size: 16px;
+}
+
+h1,
+h3{
+	font-weight: 800;
+	color: #FFF;
+}
+h1{
+	font-size: 3.8em;
+}
+h2{
+	font-size: 2em;
+}
+h3{
+	font-size: 1.6em;
+}
+
+a{
+	text-decoration: none;
+	cursor: pointer;
+}
+
+img{
+	width: 100%;
+}
+
+input[type="text"]{
+	padding: 1.2em .8em;
+	width: 100%;
+	border-radius: 4px;
+}
+
+textarea{
+	width: 100%;
+	resize: none;
+	border-radius: 4px;
+}
+
+input,
+textarea{
+	border: 2px solid #C9C9C9;
+}
+
+/*Helper*/
+.primary-color{
+	color: #A4904F;
+}
+
+.float-right{
+	float: right;
+}
+
+.float-left{
+	float: left;
+}
+
+.font-weight-bold{
+	font-weight: 600;
+}
+
+.btn{
+	padding: 1.2em 3.4em;
+	font-weight: bold;
+	color: #FFF;
+	border-radius: 4px;
+	display: inline-block;
+}
+
+.btn-solid{
+	background-color: #A4904F;
+}
+
+.btn-solid:hover{
+	background-color: #928046;
+}
+
+.btn-outline{
+	color: #A4904F;
+	border: 1px solid #A4904F;
+}
+
+.btn-outline:hover{
+	background-color: #A4904F;
+	color: #FFF;
+}
+
+.section__padding{
+	padding: 6em 0 1em;
+}
+
+
+/*Hero Section*/
+.section__hero{
+	background: url(img/hero.jpg);
+	background-position: center;
+	background-size: cover;
+	height: 44em;
+	position: relative;
+}
+
+.section__hero .btn{
+	margin-top: 2.6em;
+}
+
+.hero__text{
+	position: absolute;
+    bottom: 8%;
+    text-align: center;
+    width: 100%;
+}
+
+/*Section Description*/
+.section__description{
+	background-color: #F6F0DC;
+}
+
+.section__description .float-left{
+	width: 66.64%;
+}
+
+.section__description .float-left p{
+	width: 76%;
+}
+
+.section__description .float-right{
+	width: 33.32%;
+}
+
+.section__description .float-right img{
+	width: 65%;
+}
+
+.section__description .float-left p{
+	line-height: 34px;
+	font-weight: 500;
+	padding-top: 2.8em;
+}
+
+.section__description .float-left a{
+	font-size: 1.2em;
+	margin-top: 1.2em;
+	display: inline-block;
+}
+
+
+/*Novel BOoks*/
+.section__books{
+	position: relative;
+}
+
+.grid-container {
+  display: grid;
+  grid-column-gap: 50px;
+  grid-template-columns: 30% 30% 30%;
+  padding: 6px;
+}
+
+.grid-item {
+  text-align: center;
+  position: relative;
+}
+
+.grid-item img{
+	position: relative;
+}
+
+.section__books .grid-item .books__img-text{
+	bottom: 8%;
+	text-align: center;
+	position: absolute;
+	width: 100%;
+	display: none;
+}
+
+.section__books .grid-item:hover .books__img-text{
+	display: block;
+}
+
+.booksoverlay.overlay{
+	display: none;
+}
+
+.section__books .grid-item:hover .booksoverlay.overlay{
+	display: block;
+}
+
+.section__books .grid-item:hover{
+	box-shadow: 5px 3px 11px 1px rgb(208, 206, 206);
+}
+
+.section__books .grid-item p{
+	font-size: 1.2em;
+	color: #FFF;
+}
+
+.section__books .grid-item .btn{
+	padding: .8em 3.4em;
+	margin-top: 1.5em;
+}
+
+.grid-item.img1{
+	background: url(img/lor1.jpg) no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: relative;
+    /*box-shadow: 5px 3px 11px 1px rgb(208, 206, 206);*/
+}
+
+.grid-item.img2{
+	background: url(img/lor2.jpg) no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 100%;
+    height: 30em;
+}
+
+.grid-item.img3{
+	background: url(img/lor3.jpg) no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 100%;
+    height: 30em;
+}
+
+.books__overlay-bg{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #F6F0DC;
+	left: 0;
+	top: 0;
+	z-index: -1;
+	height: 38%;
+}
+
+/*Form*/
+.section__book-ticket{
+}
+
+.book__form{
+	width: 45%;
+}
+
+.book__form .input__div{
+	margin: 1.8em 0 .6em;
+}
+
+.input__div .btn{
+	margin-top: 1.5em;
+}
+
+.book__form label{
+	margin-bottom: .4em;
+	display: inline-block;
+}
+
+.num_tix li{
+	display: inline-block;
+	padding-right: 2em;
+}
+
+
+
+
+
+
+
+/* The container */
+.label-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-right: 1.2em;
+}
+
+
+/* Hide the browser's default checkbox */
+.label-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark,
+.radio_checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    background-color: #fefefe;
+    border-radius: 50%;
+    padding: 1px 0 0 11px;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "\2713";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.label-container input:checked ~ .checkmark:after,
+.label-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.label-container .radio_checkmark:after {
+ 	top: 0;
+	left: 0;
+	width: 8px;
+	height: 8px;
+}
+
+.label-container input:checked ~ .radio_checkmark,
+.label-container:hover input ~ .radio_checkmark {
+    background-color: #A4904F;
+    color:white;
+}
+
+
+
+
+input[type=checkbox] + label {
+  color: #ccc;
+  font-style: italic;
+} 
+input[type=checkbox]:checked + .label-container {
+  color: #f00;
+  font-style: normal;
+  text-decoration: line-through;
+} 
